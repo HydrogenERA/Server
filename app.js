@@ -10,7 +10,7 @@ const cors = require('cors')
 const errorHandler = require('./middlewares/errorHandler')
 const PORT = process.env.PORT
 
-mongoose.connect(process.env.MONGO_URI, { useCreateIndex: true, useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false})
+mongoose.connect(process.env.MONGO_ATLAS, { useCreateIndex: true, useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false})
   .then(() => console.log(`connected to db`))
   .catch(err => console.log(`failed to connect to db`))
 
